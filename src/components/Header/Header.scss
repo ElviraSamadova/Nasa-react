@@ -1,0 +1,50 @@
+@use '../../scss/Main.scss' as *;
+
+#header{
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        a{
+        text-decoration: none;
+
+            h3{
+                color: black;
+        font-weight: 500;
+
+
+            }
+        }
+    }
+
+    .nav{
+        li{
+            display: inline;
+            margin-right: 20px;
+            a{
+                color: black;
+                text-decoration: none;
+                transition: 0.3s ease-in-out;
+                &:hover{
+                    color: rgb(11, 22, 141);
+                   
+                }
+            }
+            .btnl{
+                padding: 10px;
+                border-radius: 20px;
+                background-color: rgb(11, 22, 141);
+                color: #eee;
+               &:hover{
+                color: #eee;
+                transform: scaleX(1.2);
+               }
+    
+            }
+        }
+    }
+}
+
+
