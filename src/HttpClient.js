@@ -1,4 +1,5 @@
-import axios from "axios"
+import axios from "axios";
+// import {REACT_APP_NASA_ENDPOINT,REACT_APP_NASA_API_KEY}  from "./const"
 
 const nasaEndpoint = process.env.REACT_APP_NASA_ENDPOINT
 const nasaApiKey = process.env.REACT_APP_NASA_API_KEY
@@ -22,6 +23,6 @@ axios.interceptors.request.use(
 
 export default {
   getApod() {
-    return axios.get(`${nasaEndpoint}planetary/apod?${nasaApiKey}`)
+    return axios.get(`${nasaEndpoint}planetary/apod${nasaApiKey}`)
   },
 }
