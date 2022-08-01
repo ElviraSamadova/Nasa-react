@@ -1,30 +1,34 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import "./Login.scss"
+import { useTranslation } from "react-i18next";
+
 
 function Login() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="login-box">
 <Form className='login'>
-  <h4 className='text-center'>Login</h4>
+  <h4 className='text-center'>{t("login.title")}</h4>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Label>{t("login.email")}</Form.Label>
+        <Form.Control type="email" placeholder={t("login.email-pl")} />
         <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
+          {t("login.info")}
         </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Label>{t("login.password")}</Form.Label>
+        <Form.Control type="password" placeholder={t("login.password-pl")} />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+        <Form.Check type="checkbox" label={t("login.check")} />
       </Form.Group>
       <div className='sub-btn'>
       <Button variant="primary" type="submit">
-        Submit
+      {t("login.btn")}
       </Button>
       </div>
      

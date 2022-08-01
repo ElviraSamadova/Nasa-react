@@ -13,7 +13,7 @@ const RouterN = () => {
     <Routes>
       <Route path="/" exact={true} element={<Home/>}/>
       <Route path="/login" element={<Login/>}/>
-      <Route path="/signup" element={<SignUp/>}/>
+      <Route path="/signup" element={<SignUp/>}/>git commit -m first
     <Route path="/about" element={<About/>}/>
     <Route path="/contact" element={<Contact/>}/>
     <Route path="*" element={<Error/>}/>
