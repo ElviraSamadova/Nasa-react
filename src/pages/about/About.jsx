@@ -1,12 +1,16 @@
 import React from 'react'
 import './About.scss'
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+
+  const { t } = useTranslation();
+
   return (
     <div>
        <div className="about-box">
-        <h5>About NASA</h5>
-        <p>The National Aeronautics and Space Administration is America’s civil space program and the global leader in space exploration. The agency has a diverse workforce of just under 18,000 civil servants, and works with many more U.S. contractors, academia, and international and commercial partners to explore, discover, and expand knowledge for the benefit of humanity. With an annual budget of $23.2 billion in Fiscal Year 2021, which is less than 0.5% of the overall U.S. federal budget, NASA supports more than 312,000 jobs across the United States, generating more than $64.3 billion in total economic output. </p>
+        <h5>{t("about.title")}</h5>
+        <p>{t("about.desc") }</p>
        </div>
        <div className="images">
         <div className="container  d-flex">

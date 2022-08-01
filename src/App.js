@@ -1,12 +1,14 @@
-import Header from "./components/Header/Header";
+import Header from "./components/Header/Header.tsx";
 import React, { useState, useEffect } from "react"
 import HttpClient from "./HttpClient"
 import { BrowserRouter as Router } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer.tsx";
 import RouterN from "./routes/RouterN";
+
 
 function App() {
   const [apod, setApod] = useState({})
+
 
   useEffect(() => {
     HttpClient.getApod().then(apodData => {
@@ -14,9 +16,11 @@ function App() {
     })
   }, [])
 
+
   return (
 
     <div className="App container">
+
       <Router>
           <Header/>
            <RouterN/>
@@ -25,7 +29,8 @@ function App() {
      
     </div>
   );
-}
+  }
+
 
 export default App;
 
