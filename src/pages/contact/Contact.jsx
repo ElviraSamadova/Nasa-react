@@ -3,17 +3,14 @@ import './Contact.scss'
 import {AiOutlinePhone,AiOutlineMail,} from "react-icons/ai";
 import {GrLocation} from 'react-icons/gr';
 import {Link} from 'react-router-dom';
-import { useTranslation } from "react-i18next";
 
 const Contact = () => {
-  const { t, i18n } = useTranslation();
-
   return (
     <div className='contact'>
        {/* <h1 className='text-center'>Contact</h1> */}
 
        <div className="left">
-          <h3>{t("contact")}</h3>
+          <h3>Contact Information</h3>
           <ul className=' contact-info mt-2 list-unstyled'>
             <li> <AiOutlinePhone/>  <Link to='#'>+999440304</Link></li>
             <li><AiOutlineMail/>  <Link to="#"> example1@gmail.com </Link></li>
