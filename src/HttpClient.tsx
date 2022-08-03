@@ -6,8 +6,8 @@ const nasaApiKey = process.env.REACT_APP_NASA_API_KEY
 axios.interceptors.request.use(
   config => {
     config.params = config.params ? config.params : {}
-    const configUrl = config.url
-    if (configUrl.includes(nasaEndpoint)) {
+    const configUrl: any = config.url
+    if (configUrl.includes(nasaEndpoint!)) {
       config.params["api_key"] = nasaApiKey
     }
 

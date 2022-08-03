@@ -24,7 +24,7 @@ const Contact = () => {
        </div>
 
        <div className="right">
-       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97238.72854453837!2d49.8434048!3d40.3931136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1659083996706!5m2!1sen!2s" title="map" width="100%" height="550" allowfullscreen="true" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97238.72854453837!2d49.8434048!3d40.3931136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1659083996706!5m2!1sen!2s" title="map" width="100%" height="550" allowFullScreen loading="eager" referrerPolicy='no-referrer-when-downgrade'></iframe>
        </div>
     </div>
   )

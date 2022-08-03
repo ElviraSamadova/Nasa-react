@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^28.1.6",
     "axios": "^0.27.2",
     "babel-eslint": "^10.0.2",
     "bootstrap": "^5.2.0",
@@ -27,13 +26,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "lint": "eslint -c .eslintrc.js --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint -c .eslintrc --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "npm run lint -- --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "prepare": "husky install"
+  },
+  "prettier": {
+    "printWidth": 100
   },
   "browserslist": {
     "production": [
@@ -48,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^28.1.6",
     "@types/node": "^18.6.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
@@ -56,7 +60,23 @@
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "2.7.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "lint-staged": {
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npm run format",
+      "npm run lint",
+      "git add"
+    ]
   }
 }

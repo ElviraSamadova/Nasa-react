@@ -13,7 +13,7 @@ i18n
     detection: {
       order: ['queryString', 'cookie'],
       cache: ['cookie']
-    },
+    } as object,
     interpolation: {
       escapeValue: false
     }
