@@ -1,5 +1,5 @@
 import {Route,Routes} from "react-router-dom";
-import React from 'react'
+import React from 'react';
 import Home from "../pages/home/Home";
 import Login from "../pages/login-page/Login";
 import SignUp from "../pages/signUp/SignUp";
@@ -18,7 +18,7 @@ const RouterN = () => {
     <Route path="/contact" element={<Contact/>}/>
     <Route path="*" element={<NotFoundPage/>}/>
     </Routes>
-  )
-}
+  );
+};
 
 export default RouterN;

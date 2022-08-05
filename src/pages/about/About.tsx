@@ -1,5 +1,5 @@
-import React from 'react'
-import './About.scss'
+import React from 'react';
+import './About.scss';
 import { useTranslation } from "react-i18next";
 
 const About = () => {
@@ -33,7 +33,7 @@ const About = () => {
        
        </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
