@@ -2,7 +2,7 @@
 import Header from "./components/Header/Header";
 import { BrowserRouter as Router } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import PageRouter from "./routes/RouterN";
+import PageRouter from "./routes/NasaRouter";
 
 
 function App() {
@@ -20,10 +20,3 @@ function App() {
 export default App;
 
 
-
-
-
-
-
- 
-   
