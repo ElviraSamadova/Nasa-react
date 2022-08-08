@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./Footer.scss";
 import { useTranslation } from "react-i18next";
 
@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div id="footer">
-       <h6>{t("footer")} &copy;</h6>
+      <h6>{t("footer")} &copy;</h6>
     </div>
   );
 };

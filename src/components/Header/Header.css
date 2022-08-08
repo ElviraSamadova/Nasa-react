@@ -1,15 +1,15 @@
-@use '../../scss/Main.scss' as *;
+@use "../../scss/Main.scss" as *;
 #header {
   margin: 1.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #header .logo a {
@@ -47,7 +47,7 @@
 #header .nav li .btnl:hover {
   color: #eee;
   -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);
+  transform: scaleX(1.2);
 }
 
 #header .lang button {

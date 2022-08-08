@@ -4,7 +4,7 @@ const nasaEndpoint = process.env.REACT_APP_NASA_ENDPOINT;
 const nasaApiKey = process.env.REACT_APP_NASA_API_KEY;
 
 axios.interceptors.request.use(
-  config => {
+  (config) => {
     config.params = config.params ? config.params : {};
     const configUrl: any = config.url;
     if (configUrl.includes(nasaEndpoint!)) {
@@ -13,15 +13,14 @@ axios.interceptors.request.use(
 
     return config;
   },
-  error => {
+  (error) => {
     return Promise.reject(error);
-  },
+  }
 );
 
 const httpClient = {
   getApod() {
-   return axios.get(`${nasaEndpoint}planetary/apod`);
- }
-}
+    return axios.get(`${nasaEndpoint}planetary/apod`);
+  },
+};
 export default httpClient;
-

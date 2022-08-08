@@ -1,4 +1,4 @@
- {
+{
   "title": "Astronomy Picture of the Day",
   "footer": "All rights reserved",
   "menu": {
@@ -7,12 +7,12 @@
     "part3": "Login",
     "part4": "Sign up"
   },
-  "about":{
+  "about": {
     "title": "About NASA",
     "desc": "The National Aeronautics and Space Administration is America’s civil space program and the global leader in space exploration. The agency has a diverse workforce of just under 18,000 civil servants, and works with many more U.S. contractors, academia, and international and commercial partners to explore, discover, and expand knowledge for the benefit of humanity. With an annual budget of $23.2 billion in Fiscal Year 2021, which is less than 0.5% of the overall U.S. federal budget, NASA supports more than 312,000 jobs across the United States, generating more than $64.3 billion in total economic output."
   },
   "contact": "Contact Information",
-  "login":{
+  "login": {
     "title": "Login",
     "email": "Email address",
     "email-pl": "Enter your email",
@@ -21,6 +21,5 @@
     "password-pl": " Password",
     "btn": "Submit",
     "check": "Check me out"
-
   }
 }

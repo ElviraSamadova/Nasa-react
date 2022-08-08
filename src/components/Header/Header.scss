@@ -1,65 +1,58 @@
-@use '../../scss/Main.scss' as *;
+@use "../../scss/Main.scss" as *;
 
-#header{
-    margin: 1.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#header {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    .logo{
-        a{
-        text-decoration: none;
+  .logo {
+    a {
+      text-decoration: none;
 
-            h3{
-                color: black;
+      h3 {
+        color: black;
         font-weight: 500;
-
-
-            }
-        }
+      }
     }
+  }
 
-    .nav{
-        li{
-            display: inline;
-            margin-right: 20px;
-            a{
-                color: black;
-                text-decoration: none;
-                transition: 0.3s ease-in-out;
-                &:hover{
-                    color: rgb(11, 22, 141);
-                   
-                }
-            }
-            .btnl{
-                padding: 10px;
-                border-radius: 20px;
-                background-color: rgb(11, 22, 141);
-                color: #eee;
-               &:hover{
-                color: #eee;
-                transform: scaleX(1.2);
-               }
-    
-            }
+  .nav {
+    li {
+      display: inline;
+      margin-right: 20px;
+      a {
+        color: black;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: rgb(11, 22, 141);
         }
-    }
-
-
-    .lang{
-        button{
-            border-radius: 5px;
-            background-color: rgb(234, 234, 234);
-            color: #eee;
-            padding: 5px 8px;
-            font-weight: 500;
-            font-size: 14px;
-            border: none;
-            outline: none;
-            margin-right: 5px;
+      }
+      .btnl {
+        padding: 10px;
+        border-radius: 20px;
+        background-color: rgb(11, 22, 141);
+        color: #eee;
+        &:hover {
+          color: #eee;
+          transform: scaleX(1.2);
         }
+      }
     }
+  }
+
+  .lang {
+    button {
+      border-radius: 5px;
+      background-color: rgb(234, 234, 234);
+      color: #eee;
+      padding: 5px 8px;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      outline: none;
+      margin-right: 5px;
+    }
+  }
 }
-
-
