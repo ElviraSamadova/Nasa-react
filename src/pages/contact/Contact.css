@@ -1,0 +1,38 @@
+@use "../../scss/Main.scss" as *;
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.contact .contact-info {
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact .contact-info li {
+  margin-top: 30px;
+}
+
+.contact .contact-info a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.contact .contact-info a:hover {
+  color: #0b168d;
+}
+
+.contact .right {
+  width: 70%;
+}
+/*# sourceMappingURL=Contact.css.map */

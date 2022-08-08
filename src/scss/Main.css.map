@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,gFAAI;AAGZ,AAAA,IAAI,CAAA;EACA,WAAW,EAAE,wBAAwB;CACxC",
+    "sources": [
+        "Main.scss",
+        "Breakpoint.scss"
+    ],
+    "names": [],
+    "file": "Main.css"
+}

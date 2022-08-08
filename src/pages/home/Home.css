@@ -1,5 +1,4 @@
 @use "../../scss/Main.scss" as *;
-
 .nasa-img {
   position: relative;
   border-radius: none !important;
@@ -14,6 +13,7 @@
   width: 100%;
   z-index: 59999;
 }
+
 .info {
   position: absolute;
   top: 52%;
@@ -28,3 +28,4 @@
   font-size: 14px;
   margin: 2rem 3rem;
 }
+/*# sourceMappingURL=Home.css.map */

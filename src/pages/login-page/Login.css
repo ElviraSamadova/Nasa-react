@@ -1,0 +1,23 @@
+@use "../../scss/Main.scss" as *;
+.login-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-box .login {
+  width: 35%;
+}
+
+.login-box .sub-btn {
+  text-align: center;
+}
+
+.login-box .sub-btn button {
+  background-color: #0b168d;
+}
+/*# sourceMappingURL=Login.css.map */
