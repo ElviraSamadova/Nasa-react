@@ -6,6 +6,7 @@ import SignUp from "../pages/signUp/SignUp";
 import About from "../pages/about/About";
 import Contact from "../pages/contact/Contact";
 import NotFoundPage from "../pages/error-page/Error";
+import Apod from "../pages/apod/Apod";
 
 const NasaRouter = () => {
   return (
@@ -16,6 +17,7 @@ const NasaRouter = () => {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFoundPage />} />
+      <Route path="/apod" element={<Apod />} />
     </Routes>
   );
 };

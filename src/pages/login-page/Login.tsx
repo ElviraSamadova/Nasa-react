@@ -7,9 +7,9 @@ function Login() {
   const { t } = useTranslation();
 
   return (
-    <div className="login-box">
+    <div className="login-box page">
       <Form className="login">
-        <h4 className="text-center">{t("login.title")}</h4>
+        <h1 className="text-center mb-4">{t("login.title")}</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>{t("login.email")}</Form.Label>
           <Form.Control type="email" placeholder={t("login.email-pl")} />
@@ -23,8 +23,8 @@ function Login() {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label={t("login.check")} />
         </Form.Group>
-        <div className="sub-btn">
-          <Button variant="primary" type="submit">
+        <div className="text-center">
+          <Button className="sub-btn mt-4" type="submit">
             {t("login.btn")}
           </Button>
         </div>

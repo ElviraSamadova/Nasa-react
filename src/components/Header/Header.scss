@@ -1,58 +1,65 @@
 @use "../../scss/Main.scss" as *;
 
 #header {
-  margin: 1.5rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 55555;
+  // background-image: url(https://cdn.wallpapersafari.com/21/7/pHK2e6.jpg);
+  background-color: #010710;
+ 
 
-  .logo {
-    a {
-      text-decoration: none;
-
-      h3 {
-        color: black;
-        font-weight: 500;
-      }
-    }
-  }
-
-  .nav {
-    li {
-      display: inline;
-      margin-right: 20px;
+  .header-wrapper{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
       a {
-        color: black;
         text-decoration: none;
-        transition: 0.3s ease-in-out;
-        &:hover {
-          color: rgb(11, 22, 141);
+  
+        h3 {
+          color: black;
+          font-weight: 500;
         }
       }
-      .btnl {
-        padding: 10px;
-        border-radius: 20px;
-        background-color: rgb(11, 22, 141);
-        color: #eee;
-        &:hover {
+    }
+  
+    .nav {
+      li {
+        display: inline;
+        transition: .3s ease-in-out;
+        margin-right: 2.5rem;
+        a {
           color: #eee;
-          transform: scaleX(1.2);
+          text-decoration: none;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: #c0c0fd;
+          }
+        }
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+  
+    .lang {
+      .lang-btn {
+        border-radius: 5px;
+        background-color: rgb(234, 234, 234);
+        color: #eee;
+        padding: 5px 8px;
+        font-weight: 500;
+        font-size: 17px;
+        border: none;
+        outline: none;
+        margin-right: 7px;
+        transition: .3s ease-in-out;
+        &:hover{
+          background-color: #c0c0fd;
+          transform: scale(1.1);
         }
       }
     }
   }
-
-  .lang {
-    button {
-      border-radius: 5px;
-      background-color: rgb(234, 234, 234);
-      color: #eee;
-      padding: 5px 8px;
-      font-weight: 500;
-      font-size: 14px;
-      border: none;
-      outline: none;
-      margin-right: 5px;
-    }
-  }
+  
 }
+

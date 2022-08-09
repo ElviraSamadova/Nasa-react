@@ -10,7 +10,6 @@ axios.interceptors.request.use(
     if (configUrl.includes(nasaEndpoint!)) {
       config.params["api_key"] = nasaApiKey;
     }
-
     return config;
   },
   (error) => {

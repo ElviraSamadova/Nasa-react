@@ -1,31 +1,45 @@
 @use "../../scss/Main.scss" as *;
-.nasa-img {
-  position: relative;
-  border-radius: none !important;
-}
-
-.nasa-img::after {
-  position: absolute;
-  background: #000;
-  top: 0;
-  left: 0;
-  height: 100%;
+.home {
   width: 100%;
-  z-index: 59999;
+  background-image: url(https://cdn.wallpapersafari.com/21/7/pHK2e6.jpg);
+  background-blend-mode: multiply;
+  background-color: #9e9e9e;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 0;
+  position: relative;
 }
 
-.info {
+.home .rocket {
+  margin-left: 5px;
+}
+
+.home .content {
   position: absolute;
-  top: 52%;
-  left: 8%;
-  z-index: 5555;
   color: #fff;
+  margin: 10% 25%;
 }
 
-.nasa-desc {
-  display: inline-block;
-  line-height: 2;
-  font-size: 14px;
-  margin: 2rem 3rem;
+.home .content h1 {
+  font-size: 3rem;
+}
+
+.home .content h5 {
+  display: block;
+  font-weight: 200 !important;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+.home .explore-btn {
+  font-size: 19px;
+  border-radius: 20px;
+  font-weight: 400;
+  color: #000;
+  background-color: #c0c0fd;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
 }
 /*# sourceMappingURL=Home.css.map */
