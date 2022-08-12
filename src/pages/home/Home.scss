@@ -33,6 +33,7 @@
 }
 
 .explore-btn{
+  z-index: 55555555;
   font-size: 19px;
   border-radius: 20px;
   font-weight: 400;
@@ -41,10 +42,7 @@
   border: none;
   outline: none;
   padding: 10px 20px;
-  transition: .3s ease-in-out;
-  &:hover{
-    font-size: 21px;
-  }
+  transition: .5ms ease-in-out;
 }
 
 }
