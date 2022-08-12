@@ -47,11 +47,9 @@ const Header = () => {
         </ul>
         <div className="lang">
           <button className="lang-btn" onClick={() => changeLanguage("en")}>
-            {" "}
-            🇺🇸{" "}
+            🇺🇸
           </button>
           <button className="lang-btn" onClick={() => changeLanguage("ru")}>
-            {" "}
             🇷🇺
           </button>
         </div>

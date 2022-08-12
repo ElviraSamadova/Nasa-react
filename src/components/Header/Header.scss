@@ -2,10 +2,7 @@
 
 #header {
   z-index: 55555;
-  // background-image: url(https://cdn.wallpapersafari.com/21/7/pHK2e6.jpg);
   background-color: #010710;
- 
-
   .header-wrapper{
     padding: 1rem 0;
     display: flex;
@@ -14,7 +11,6 @@
     .logo {
       a {
         text-decoration: none;
-  
         h3 {
           color: black;
           font-weight: 500;
