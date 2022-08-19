@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import "./Breakpoint.scss";
 
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #010710;
@@ -10,5 +11,10 @@ body {
   }
   .page{
     height: 77vh;
+  }
+
+  .container{
+    width: 96%;
+    margin: auto;
   }
 }

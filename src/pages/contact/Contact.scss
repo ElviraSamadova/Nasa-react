@@ -1,9 +1,13 @@
 @use "../../scss/Main.scss" as *;
 
 .contact {
+  align-items: center;
   .contact-info {
     font-family: "Montserrat", sans-serif;
+      margin-left: 0; 
+      padding-left: 0; 
     li {
+      list-style: none;
       transition: 0.3s ease-in-out;
       margin-top: 30px;
       a {

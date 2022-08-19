@@ -1,23 +1,26 @@
-// import Apod from "../apodComponent/ApodComponent"
-import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import "./ApodListing.scss";
+import { useEffect, useState, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { showApod } from "../../redux/actions/apodAction";
+import Apod from "../../components/apod/Apod";
+// MUI IMPORTS
 import TextField from "@mui/material/TextField";
+import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { showApod } from "../../redux/actions/apodAction";
-import { useEffect, useState } from "react";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+import { IStore } from "../../redux/reducers";
 
 const nasaEndpoint = process.env.REACT_APP_NASA_ENDPOINT;
 const nasaApiKey = process.env.REACT_APP_NASA_API_KEY;
 
 const ApodListing = () => {
-  const [value, setValue] = useState(new Date());
-
-  const handleChange = (newValue: any) => {
+  const [value, setValue] = useState<any>(new Date());
+  const handleChange = (newValue: Date | null) => {
     setValue(newValue);
   };
+  const apods = useSelector<IStore>((state) => state.allApods.apods);
+  const dispatch = useDispatch();
 
   const newValue = formatDate(value);
 
@@ -25,29 +28,28 @@ const ApodListing = () => {
     return value.toISOString().split("T")[0];
   }
 
-  const apods = useSelector((state: any) => state.allApods.apods);
-  const { url, date, title, explanation } = apods;
-  const dispatch = useDispatch();
-
   const fetchApods = async () => {
-    const response: any = await axios
+    axios
       .get(`${nasaEndpoint}${nasaApiKey}&date=${newValue}`)
-      .catch((err) => {
-        console.log("Err: ", err);
+      .then((response: AxiosResponse) => {
+        dispatch(showApod(response.data));
       });
-    dispatch(showApod(response.data));
   };
 
   useEffect(() => {
     fetchApods();
   }, [apods]);
 
+  const maxDate = useMemo(() => {
+    return new Date();
+  }, []);
+
   return (
-    <div className=" container text-center">
+    <div className="main-content container text-center">
       <div className="dp">
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <DesktopDatePicker
-            maxDate={new Date()}
+            maxDate={maxDate}
             minDate={new Date("June 21, 1995")}
             label="Date desktop"
             inputFormat="yyyy-MM-dd"
@@ -57,26 +59,7 @@ const ApodListing = () => {
           />
         </LocalizationProvider>
       </div>
-      <div className=" mt-4">
-        <div className="apodCard row justify-content-between align-items-center">
-          <div className="image col-12 col-md-5">
-            <img
-              className="n-img"
-              width="100%"
-              height="570px"
-              src={url}
-              alt={title}
-            />
-          </div>
-          <div className="content col-12 col-md-6">
-            <h2 style={{ color: "white" }} className="title mt-4">
-              {title}
-            </h2>
-            <h4 className="date-nasa">{date}</h4>
-            <p className="desc-nasa">{explanation}</p>
-          </div>
-        </div>
-      </div>
+      <Apod />
     </div>
   );
 };

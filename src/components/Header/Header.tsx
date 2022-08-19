@@ -27,7 +27,7 @@ const Header = () => {
             <Link to="/about">{t("menu.part1")}</Link>
           </li>
           <li>
-            <Link className="btnl" to="/calendar">
+            <Link className="btnl" to="/apod">
               {t("menu.part2")}
             </Link>
           </li>

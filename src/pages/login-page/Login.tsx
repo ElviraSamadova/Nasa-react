@@ -8,8 +8,8 @@ function Login() {
 
   return (
     <div className="login-box page">
-      <Form className="login">
-        <h1 className="text-center mb-4">{t("login.title")}</h1>
+      {/* <Form className="login">
+        <h1 className="login-title">{t("login.title")}</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>{t("login.email")}</Form.Label>
           <Form.Control type="email" placeholder={t("login.email-pl")} />
@@ -28,7 +28,7 @@ function Login() {
             {t("login.btn")}
           </Button>
         </div>
-      </Form>
+      </Form> */}
     </div>
   );
 }
