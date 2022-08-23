@@ -1,31 +1,32 @@
 import axios, { AxiosResponse } from "axios";
 import "./ApodListing.scss";
 import { useEffect, useState, useMemo } from "react";
+import Apod from "../../components/apod/Apod";
 import { useDispatch, useSelector } from "react-redux";
 import { showApod } from "../../redux/actions/apodAction";
-import Apod from "../../components/apod/Apod";
+import { IStore } from "../../redux/reducers";
 // MUI IMPORTS
 import TextField from "@mui/material/TextField";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { IStore } from "../../redux/reducers";
 
 const nasaEndpoint = process.env.REACT_APP_NASA_ENDPOINT;
 const nasaApiKey = process.env.REACT_APP_NASA_API_KEY;
 
 const ApodListing = () => {
-  const [value, setValue] = useState<any>(new Date());
+  const [value, setValue] = useState<Date | null>(new Date());
   const handleChange = (newValue: Date | null) => {
     setValue(newValue);
   };
+
   const apods = useSelector<IStore>((state) => state.allApods.apods);
   const dispatch = useDispatch();
 
   const newValue = formatDate(value);
 
-  function formatDate(value: any) {
-    return value.toISOString().split("T")[0];
+  function formatDate(value: Date | null) {
+    return value!.toISOString().split("T")[0];
   }
 
   const fetchApods = async () => {
@@ -38,7 +39,7 @@ const ApodListing = () => {
 
   useEffect(() => {
     fetchApods();
-  }, [apods]);
+  }, []);
 
   const maxDate = useMemo(() => {
     return new Date();
