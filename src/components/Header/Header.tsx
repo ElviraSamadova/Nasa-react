@@ -12,37 +12,47 @@ const Header = () => {
 
   return (
     <div id="header">
-      <div className="logo">
-        <Link to="/">
-          {" "}
-          <img
-            src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
-            width="150px"
-            alt="nasa-logo"
-          />
-        </Link>
-      </div>
-      <ul className="nav">
-        <li>
-          <Link to="/about">{t("menu.part1")}</Link>
-        </li>
-        <li>
-          <Link to="/contact">{t("menu.part2")}</Link>
-        </li>
-        <li>
-          <Link className="btnl" to="/login">
-            {t("menu.part3")}
+      <div className="header-wrapper container">
+        <div className="logo">
+          <Link to="/">
+            <img
+              src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
+              width="150px"
+              alt="nasa-logo"
+            />
           </Link>
-        </li>
-        <li>
-          <Link className="btnl" to="/signup">
-            {t("menu.part4")}
-          </Link>
-        </li>
-      </ul>
-      <div className="lang">
-        <button onClick={() => changeLanguage("en")}> 🇺🇸 </button>
-        <button onClick={() => changeLanguage("ru")}>🇷🇺</button>
+        </div>
+        <ul className="nav">
+          <li>
+            <Link to="/about">{t("menu.part1")}</Link>
+          </li>
+          <li>
+            <Link className="btnl" to="/apod">
+              {t("menu.part2")}
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact">{t("menu.part3")}</Link>
+          </li>
+          <li>
+            <Link className="btnl" to="/login">
+              {t("menu.part4")}
+            </Link>
+          </li>
+          <li>
+            <Link className="btnl" to="/signup">
+              {t("menu.part5")}
+            </Link>
+          </li>
+        </ul>
+        <div className="lang">
+          <button className="lang-btn" onClick={() => changeLanguage("en")}>
+            🇺🇸
+          </button>
+          <button className="lang-btn" onClick={() => changeLanguage("ru")}>
+            🇷🇺
+          </button>
+        </div>
       </div>
     </div>
   );

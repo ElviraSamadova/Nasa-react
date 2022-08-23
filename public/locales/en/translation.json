@@ -1,11 +1,16 @@
 {
   "title": "Astronomy Picture of the Day",
+  "home": {
+    "info": "Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.",
+    "btn": "Let's Explore"
+  },
   "footer": "All rights reserved",
   "menu": {
     "part1": "About",
-    "part2": "Contact",
-    "part3": "Login",
-    "part4": "Sign up"
+    "part2": "Calendar",
+    "part3": "Contact",
+    "part4": "Login",
+    "part5": "Sign up"
   },
   "about": {
     "title": "About NASA",

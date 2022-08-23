@@ -1,10 +1,15 @@
 @use "../../scss/Main.scss" as *;
 
 #footer {
-  margin: 5rem 0;
-  h6 {
-    font-weight: 300;
-  }
-
+  align-items: center;
+  margin: 1.5rem 0;
+  width: 100%;
   text-align: center;
+  z-index: 88888888;
+  color: #eee;
+  h4{
+    z-index: 88888888;
+    font-weight: 300;
+    color: #eee !important;
+  }
 }

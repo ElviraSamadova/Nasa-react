@@ -1,9 +1,10 @@
 import React from "react";
+import "./Error.scss";
 
 const Error = () => {
   return (
-    <div>
-      <h1 className="text-center">Not Found</h1>
+    <div className="error-page page">
+      <h1>Not Found</h1>
     </div>
   );
 };

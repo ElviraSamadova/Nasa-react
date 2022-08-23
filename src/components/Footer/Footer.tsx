@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div id="footer">
-      <h6>{t("footer")} &copy;</h6>
+      <h4>{t("footer")} &copy;</h4>
     </div>
   );
 };
